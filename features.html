@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkUP Features</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: radial-gradient(circle at bottom,#0b0f25 0%,#05070f 40%,#000 100%);
+color:white;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 70px;
+}
+
+.logo{
+font-size:42px;
+font-weight:700;
+background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.nav-links a{
+margin-left:35px;
+text-decoration:none;
+color:#d0d6ff;
+font-size:18px;
+transition:.3s;
+}
+.nav-links a:hover{ color:#ff3fa4; }
+
+/* Header */
+.header{
+text-align:center;
+margin-top:60px;
+}
+
+.header h1{
+font-size:64px;
+background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.header p{
+margin-top:20px;
+color:#b6baf0;
+font-size:20px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* Features Grid */
+.grid{
+max-width:1200px;
+margin:80px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:0 20px;
+}
+
+.card{
+padding:28px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(14px);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 35px rgba(139,220,255,.3);
+}
+
+.card h3{
+margin-bottom:12px;
+color:#ff7cc8;
+}
+
+.card p{
+opacity:.8;
+line-height:1.6;
+}
+
+/* Highlight Section */
+.highlight{
+max-width:1000px;
+margin:100px auto;
+text-align:center;
+padding:50px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+}
+
+.highlight h2{
+font-size:42px;
+margin-bottom:20px;
+color:#8bdcff;
+}
+
+.highlight p{
+opacity:.85;
+font-size:18px;
+line-height:1.7;
+}
+
+/* Footer */
+.footer{
+text-align:center;
+padding:40px;
+margin-top:80px;
+border-top:1px solid rgba(255,255,255,.15);
+}
+.footer p{opacity:.7;}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<div class="logo"><Link-Up></Link-Up></div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+
+</div>
+</div>
+
+<!-- Header -->
+<div class="header">
+<h1>Powerful Features</h1>
+<p>Everything you need for modern, seamless, real-time communication — built into one powerful platform.</p>
+</div>
+
+<!-- Features -->
+<div class="grid">
+
+<div class="card">
+<h3>HD Video Meetings</h3>
+<p>Crystal-clear video quality with adaptive resolution and smart bandwidth optimization.</p>
+</div>
+
+<div class="card">
+<h3>Instant Join Links</h3>
+<p>Start meetings instantly and share links with one click. No downloads required.</p>
+</div>
+
+<div class="card">
+<h3>Screen Sharing</h3>
+<p>Present slides, apps, or your entire screen smoothly without lag.</p>
+</div>
+
+<div class="card">
+<h3>Real-Time Chat</h3>
+<p>Send messages, emojis, files, and links during meetings without interruption.</p>
+</div>
+
+<div class="card">
+<h3>End-to-End Encryption</h3>
+<p>Secure communication with strong encryption protecting your conversations.</p>
+</div>
+
+<div class="card">
+<h3>Noise Cancellation</h3>
+<p>AI-powered audio filtering removes background noise automatically.</p>
+</div>
+
+<div class="card">
+<h3>Recording & Playback</h3>
+<p>Record meetings and access them anytime for review or sharing.</p>
+</div>
+
+<div class="card">
+<h3>Multi-User Meetings</h3>
+<p>Host large meetings with multiple participants without performance drops.</p>
+</div>
+
+<div class="card">
+<h3>Cross-Platform</h3>
+<p>Works smoothly on desktop, tablet, and mobile browsers.</p>
+</div>
+
+<div class="card">
+<h3>Low Latency Engine</h3>
+<p>Optimized real-time streaming ensures minimal delay in conversations.</p>
+</div>
+
+<div class="card">
+<h3>Custom Meeting Controls</h3>
+<p>Mute participants, manage permissions, and control sessions easily.</p>
+</div>
+
+<div class="card">
+<h3>Virtual Backgrounds</h3>
+<p>Replace your background instantly with AI-powered effects.</p>
+</div>
+
+</div>
+
+<!-- Highlight -->
+<div class="highlight">
+<h2>Built for Speed. Designed for Humans.</h2>
+<p>
+Link-Up combines powerful real-time communication technology with a clean,
+modern interface so you can focus on conversations — not complicated controls.
+Whether you're hosting a team meeting, online class, or virtual event,
+LinkUP delivers reliability, speed, and simplicity every time.
+</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+<p>© 2026 Link-Up — Connect. Share. Grow.</p>
+</div>
+
+</body>
+</html>

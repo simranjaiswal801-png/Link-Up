@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkUP Meeting Setup</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="setup-container">
+
+  <div class="setup-card">
+
+    <h1 class="title">Prepare Your Meeting</h1>
+
+    <!-- Camera Preview -->
+    <div class="preview-box">
+      <video id="preview" autoplay muted></video>
+      <span id="camStatus">Camera On</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="control-btn" id="camBtn">🎥</button>
+      <button class="control-btn" id="micBtn">🎤</button>
+    </div>
+
+    <!-- Name Input -->
+    <input type="text" placeholder="Enter your name" class="name-input">
+
+    <button class="join-btn oncl" onclick="window.location.href='meeting.html'">Join Meeting</button>
+
+  </div>
+
+</div>
+
+<script>
+    const video = document.getElementById("preview");
+const camBtn = document.getElementById("camBtn");
+const micBtn = document.getElementById("micBtn");
+const statusText = document.getElementById("camStatus");
+
+let stream;
+let camOn = true;
+let micOn = true;
+
+async function startCamera(){
+stream = await navigator.mediaDevices.getUserMedia({video:true,audio:true});
+video.srcObject = stream;
+}
+startCamera();
+
+/* CAMERA TOGGLE */
+camBtn.onclick = ()=>{
+camOn = !camOn;
+stream.getVideoTracks()[0].enabled = camOn;
+
+camBtn.classList.toggle("off");
+
+if(camOn){
+statusText.textContent="Camera On";
+camBtn.textContent="🎥";
+}else{
+statusText.textContent="Camera Off";
+camBtn.textContent="🚫";
+}
+};
+
+/* MIC TOGGLE */
+micBtn.onclick = ()=>{
+micOn = !micOn;
+stream.getAudioTracks()[0].enabled = micOn;
+
+micBtn.classList.toggle("off");
+
+if(micOn){
+micBtn.textContent="🎤";
+}else{
+micBtn.textContent="🔇";
+}
+};
+
+</script>
+</body>
+</html>

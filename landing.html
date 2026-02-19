@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started - LinkUP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+background: radial-gradient(circle at bottom,#0b0f25 0%,#05070f 40%,#000 100%);
+color:white;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:25px 70px;
+align-items:center;
+}
+
+.logo{
+font-size:40px;
+font-weight:700;
+background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.user{
+color:#8bdcff;
+font-weight:600;
+}
+
+/* Header */
+.header{
+text-align:center;
+margin-top:50px;
+}
+
+.header h1{
+font-size:60px;
+background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.header p{
+margin-top:15px;
+opacity:.8;
+}
+
+/* Grid */
+.grid{
+max-width:1200px;
+margin:80px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:20px;
+}
+
+/* Card */
+.card{
+padding:30px;
+border-radius:22px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+transition:.35s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 35px rgba(139,220,255,.3);
+}
+
+.card h2{
+margin-bottom:10px;
+color:#ff7cc8;
+}
+
+.card p{
+opacity:.85;
+margin-bottom:15px;
+}
+
+.features{
+font-size:14px;
+opacity:.75;
+}
+
+/* Button */
+.select-btn{
+margin-top:15px;
+padding:12px 22px;
+border:none;
+border-radius:25px;
+background:linear-gradient(90deg,#ff3fa4,#ff7cc8);
+color:white;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.select-btn:hover{ transform:scale(1.05); }
+
+/* Alert */
+.alert{
+position:fixed;
+top:30px;
+right:30px;
+background:#111;
+padding:16px 25px;
+border-left:5px solid #00ffa6;
+border-radius:12px;
+opacity:0;
+transform:translateY(-20px);
+transition:.4s;
+}
+
+.alert.show{
+opacity:1;
+transform:translateY(0);
+}
+.footer-lines{
+margin-top:25px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* glowing lines */
+.line{
+width:120px;
+height:2px;
+background:linear-gradient(90deg,transparent,#ff3fa4,#8bdcff,transparent);
+animation:glow 3s linear infinite;
+}
+
+@keyframes glow{
+0%{filter:brightness(1);}
+50%{filter:brightness(2);}
+100%{filter:brightness(1);}
+}
+
+/* quote text */
+.footer-quote{
+font-size:15px;
+opacity:.8;
+background:linear-gradient(90deg,#ff7cc8,#8bdcff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+letter-spacing:.5px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<div class="logo">Link-Up</div>
+<div class="user">Welcome, <span id="username"></span> 👋</div>
+</div>
+
+<!-- Header -->
+<div class="header">
+<h1>Get Started</h1>
+<p>Select what you want to use Link-Up for</p>
+</div>
+
+<!-- Cards -->
+<div class="grid">
+
+<div class="card">
+<h2>🎓 Online Classes</h2>
+<p>Perfect for teachers & students.</p>
+<div class="features">
+✔ Attendance tracking<br>
+✔ Screen share<br>
+✔ Raise hand<br>
+✔ Recording
+</div>
+<button class="select-btn" onclick="window.location.href='join.html'">Choose</button>
+</div>
+
+<div class="card">
+<h2>💼 Meetings</h2>
+<p>Professional meetings made simple.</p>
+<div class="features">
+✔ HD video<br>
+✔ Host controls<br>
+✔ Waiting room<br>
+✔ Mute participants
+</div>
+<button class="select-btn" onclick="window.location.href='join.html'">Choose</button>
+</div>
+
+<div class="card">
+<h2>📊 Webinar / Workshop</h2>
+<p>Best for large audience sessions.</p>
+<div class="features">
+✔ 100+ participants<br>
+✔ Presentation mode<br>
+✔ Live chat<br>
+✔ Recording
+</div>
+<button class="select-btn" onclick="window.location.href='join.html'">Choose</button>
+</div>
+
+<div class="card">
+<h2>🧑‍💻 Interviews</h2>
+<p>Structured interview environment.</p>
+<div class="features">
+✔ Private rooms<br>
+✔ Screen test<br>
+✔ Recording<br>
+✔ Candidate waiting lobby
+</div>
+<button class="select-btn" onclick="window.location.href='join.html'">Choose</button>
+</div>
+
+<div class="card">
+<h2>🤝 Collaboration</h2>
+<p>Teamwork made easier.</p>
+<div class="features">
+✔ File sharing<br>
+✔ Whiteboard<br>
+✔ Live chat<br>
+✔ Screen control
+</div>
+<button class="select-btn" onclick="window.location.href='join.html'">Choose</button>
+</div>
+<div class="card">
+<h2>👤 Personal Use</h2>
+<p>Perfect for personal calls and daily communication.</p>
+
+<div class="features">
+✔ One-to-one calls<br>
+✔ Friends & family chats<br>
+✔ Quick meeting links<br>
+✔ Lightweight mode<br>
+✔ Low data usage
+</div>
+
+<button class="select-btn" onclick="window.location.href='join.html'">Choose</button>
+</div>
+
+</div>
+<div style="text-align:center;margin-top:40px;">
+
+<h2 style="color:#8bdcff;margin-bottom:15px;">⚡ Quick Start Meeting</h2>
+
+<input id="roomInput" placeholder="Enter Room Name"
+style="padding:14px 20px;border-radius:30px;border:none;width:260px;margin-right:10px;outline:none;">
+
+<button onclick="window.location.href='meeting.html'"
+style="padding:14px 30px;border:none;border-radius:30px;
+background:linear-gradient(90deg,#ff3fa4,#ff7cc8);
+color:white;font-weight:600;cursor:pointer;">
+Start
+</button>
+
+</div>
+
+<div class="footer-lines">
+
+<div class="line"></div>
+
+<p class="footer-quote">
+Connecting hearts, minds & ideas — one conversation at a time.
+</p>
+
+<div class="line"></div>
+
+</div>
+
+<div id="alert" class="alert"></div>
+
+<script>
+
+/* Show Username */
+let user = localStorage.getItem("linkupUser") || "Guest";
+document.getElementById("username").innerText = user;
+
+/* Select Option */
+function choose(type){
+let box=document.getElementById("alert")
+box.innerText = type+" mode selected 🚀"
+box.classList.add("show")
+
+setTimeout(()=>box.classList.remove("show"),3000)
+}
+function startRoom(){
+let room=document.getElementById("roomInput").value
+if(room===""){
+alert("Enter room name")
+return
+}
+alert("Joining "+room+" 🚀")
+}
+document.getElementById("username").innerText =
+localStorage.getItem("userName");
+
+
+</script>
+
+</body>
+</html>

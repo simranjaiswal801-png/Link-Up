@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkUP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Background */
+body{
+    background: radial-gradient(circle at bottom, #0b0f25 0%, #05070f 40%, #000000 100%);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 70px;
+}
+
+/* Logo */
+.logo{
+    font-size:42px;
+    font-weight:700;
+    letter-spacing:2px;
+    background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Nav links */
+.nav-links a{
+    margin-left:35px;
+    text-decoration:none;
+    color:#d0d6ff;
+    font-weight:500;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#ff3fa4;
+    border-bottom:2px solid #ff3fa4;
+    padding-bottom:4px;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    margin-top:80px;
+}
+
+.hero h1{
+    font-size:68px;
+    font-weight:700;
+    background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    margin-top:20px;
+    color:#b6baf0;
+    font-size:20px;
+    line-height:1.7;
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Buttons */
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    padding:16px 38px;
+    border-radius:40px;
+    font-size:18px;
+    border:none;
+    cursor:pointer;
+    margin:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+/* Pink Button */
+.primary{
+    background:linear-gradient(90deg,#ff3fa4,#ff7cc8);
+    color:white;
+    box-shadow:0 0 25px rgba(255,63,164,0.6);
+}
+
+.primary:hover{
+    transform:scale(1.07);
+}
+
+/* Blue Button */
+.secondary{
+    background:transparent;
+    border:2px solid #69d8ff;
+    color:#69d8ff;
+    box-shadow:0 0 18px rgba(105,216,255,0.6);
+}
+
+.secondary:hover{
+    background:#69d8ff;
+    color:black;
+}
+
+/* Glass Card */
+.card{
+    width:620px;
+    margin:70px auto 0;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow:0 0 40px rgba(255,0,150,0.2);
+    text-align:left;
+}
+
+.card p{
+    font-size:20px;
+    margin:12px 0;
+    color:#dfe3ff;
+}
+/* Footer Wave */
+.wave-footer{
+    position:relative;
+    margin-top:120px;
+    background:linear-gradient(180deg,#0b0f25,#05070f);
+    text-align:center;
+    padding-top:140px;
+    padding-bottom:40px;
+}
+
+/* Waves */
+.wave{
+    position:absolute;
+    top:-80px;
+    left:0;
+    width:200%;
+    height:120px;
+    background:url("https://svgshare.com/i/14vJ.svg") repeat-x;
+    background-size:1000px 120px;
+    animation:waveMove 12s linear infinite;
+    opacity:0.6;
+}
+
+.wave:nth-child(1){
+    animation-duration:12s;
+    bottom:0;
+}
+
+.wave:nth-child(2){
+    animation-duration:18s;
+    opacity:0.4;
+}
+
+.wave:nth-child(3){
+    animation-duration:25s;
+    opacity:0.2;
+}
+
+@keyframes waveMove{
+    from{ transform:translateX(0);}
+    to{ transform:translateX(-50%);}
+}
+
+/* Footer Content */
+.footer-content h2{
+    font-size:32px;
+    margin-bottom:10px;
+    background:linear-gradient(90deg,#ff3fa4,#8bdcff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.footer-content p{
+    opacity:0.7;
+    margin-bottom:20px;
+}
+
+.footer-icons a{
+    color:white;
+    font-size:26px;
+    margin:0 15px;
+    transition:.3s;
+}
+
+.footer-icons a:hover{
+    color:#ff3fa4;
+    transform:translateY(-6px);
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Link-Up</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="about.html">About</a>
+        <a href="login.html">LogIn</a>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Connect. Share. Grow.</h1>
+    <p>
+        Link-Up is a modern communication platform that helps people connect instantly,
+        collaborate easily and build stronger networks in real time.
+    </p>
+
+    <div class="buttons">
+        <button class="btn primary" onclick="window.location.href='landing.html'">Get Started</button>
+        <button class="btn secondary" onclick="window.location.href='about.html'">About</button>
+    </div>
+</div>
+
+<!-- Bottom Card -->
+<div class="card">
+    <p>🚀 Real-time Messaging &nbsp;&nbsp; • &nbsp;&nbsp; 💬 Group Chats</p>
+    <p>🛡 Secure Connections</p>
+</div>
+
+<footer class="wave-footer">
+
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+    <div class="footer-content">
+        <h2>Link-Up</h2>
+        <p>Connect smarter. Grow faster.</p>
+
+        <div class="footer-icons">
+            <a href="https://github.com/simranjaiswal801-png" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/simran-jaiswal-948791341?" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+        <p style="margin-top:25px;font-size:14px;">© 2026 Link-Up</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
